@@ -1,36 +1,42 @@
 import React from 'react'
 
 import HomeIcon from '@material-ui/icons/Home';
+import Home from "../pages/Home";
+import Blocks from "../pages/Blocks";
+import Addresses from "../pages/Addresses";
+import Dao from "../pages/Dao";
+import SoftForks from "../pages/SoftForks";
+import NavPool from "../pages/NavPool";
 
 export const routes = {
     HOMEPAGE: {
-        component: <div>Home</div>,
+        component: <Home />,
         path: "/",
         name: "Home",
         icon: <HomeIcon/>,
     },
     BLOCKS: {
-        component: <div>Blocks</div>,
+        component: <Blocks />,
         path: "/Blocks",
         name: "Blocks",
     },
     ADDRESSES: {
-        component: <div>Addresses</div>,
+        component: <Addresses />,
         path: "/addresses",
         name: "Addresses",
     },
     DAO: {
-        component: <div>DAO</div>,
+        component: <Dao />,
         path: "/dao",
         name: "Dao",
     },
     SOFT_FORKS: {
-        component: <div>Soft Forks</div>,
+        component: <SoftForks />,
         path: "/soft-forks",
         name: "Soft Forks",
     },
     NavPool: {
-        component: <div>NavPool</div>,
+        component: <NavPool />,
         path: "/pool",
         name: "NavPool",
     },
