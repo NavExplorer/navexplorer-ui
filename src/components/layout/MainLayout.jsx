@@ -41,6 +41,9 @@ const styles = theme => ({
     drawerPaper: {
         width: drawerWidth,
     },
+    drawerListItem: {
+        paddingLeft: theme.spacing.unit * 3,
+    },
     content: {
         flexGrow: 1,
         padding: theme.spacing.unit * 3,
@@ -70,8 +73,8 @@ class MainLayout extends Component {
             </Hidden>
             <List>
                 {Object.keys(routeConfig).map(key => (
-                    <ListItem button component={Link} to={routes[key].path} onClick={this.closeDrawer}>
-                        <div className={classes.icon}>{routes[key].icon}</div>
+                    <ListItem className={classes.drawerListItem} disableGutters button component={Link} to={routes[key].path} onClick={this.closeDrawer}>
+                        {/*<div className={classes.icon}>{routes[key].icon}</div>*/}
                         <ListItemText primary={routes[key].name} />
                     </ListItem>
                 ))}
