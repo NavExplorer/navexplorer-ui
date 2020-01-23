@@ -39,6 +39,7 @@ const styles = theme => ({
         flexShrink: 0,
     },
     drawerPaper: {
+        marginTop: "64px",
         width: drawerWidth,
     },
     drawerListItem: {
@@ -46,9 +47,10 @@ const styles = theme => ({
     },
     content: {
         flexGrow: 1,
+        marginTop: "64px",
         padding: theme.spacing.unit * 3,
+        paddingTop: theme.spacing.unit,
     },
-    toolbar: theme.mixins.toolbar,
     icon: {
         color: "#5d3f8d",
         marginRight: "5px",
@@ -117,7 +119,6 @@ class MainLayout extends Component {
                 </Drawer>
             </Hidden>
             <main className={classes.content}>
-                <div className={classes.toolbar} />
                 {children}
             </main>
         </div>);
